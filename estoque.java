@@ -1,4 +1,5 @@
 public class estoque {
+    String[] deposito;
     
     public void cadastrarProduto(){}
     public void addProduto(){}
