@@ -2,5 +2,9 @@ Classes:
 
 Estoque
   Produto
-  Limpeza(Quimicos, utilitarios)
-  Alimentos(Perciveis,Não pereciveis)
+  Limpeza
+     Quimicos
+     Utilitarios
+  Alimentos
+      Perciveis
+      Não pereciveis
