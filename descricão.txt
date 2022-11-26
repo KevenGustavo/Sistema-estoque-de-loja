@@ -1,4 +1,6 @@
 Classes:
-Produto
-Limpeza(Quimicos, utilitarios)
-alimentos(Perciveis,Não pereciveis)
+
+Estoque
+  Produto
+  Limpeza(Quimicos, utilitarios)
+  Alimentos(Perciveis,Não pereciveis)
