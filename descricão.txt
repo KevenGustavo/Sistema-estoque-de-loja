@@ -1,10 +1,7 @@
 Classes:
 
 Estoque
-  Produto
-  Limpeza
-     Quimicos
-     Utilitarios
-  Alimentos
-      Perciveis
-      Não pereciveis
+Fornecedor
+Produto
+  -Vendido por peso
+  -Vendido por unidade
