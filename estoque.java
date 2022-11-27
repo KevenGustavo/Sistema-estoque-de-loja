@@ -13,6 +13,15 @@ public class estoque {
             this.deposito.add(produtoUnitario);
         }
     }
+    public void listarProdutos(){
+        for(int num = 0; num < this.deposito.size(); num++){
+            int codigo = this.deposito.get(num).getCodigo();
+            String nome = this.deposito.get(num).getNome();
+            float preço = this.deposito.get(num).getPreço();
+            int quantidade = this.deposito.get(num).getQuantidade();
+            System.out.printf("\nCodigo: %d\nNome: %s\nPreço: %4.2f\nQuantidade: %d\n", codigo, nome, preço, quantidade);
+        }
+    }
     public void addProduto(){}
     public void venderProduto(){}
     public void excluirProduto(){}

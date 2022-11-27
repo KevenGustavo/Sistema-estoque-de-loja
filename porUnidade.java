@@ -1,4 +1,4 @@
-public class porUnidade extends produto implements interfaceProduto{
+public class porUnidade extends produto{
     float preçoPorUnidade;
     int quantidadeUnidades; 
     

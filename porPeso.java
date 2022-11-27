@@ -1,4 +1,4 @@
-public class porPeso extends produto implements interfaceProduto{
+public class porPeso extends produto{
     float preçoPorKg;
     int quantidadeTotal;
     

@@ -1,4 +1,4 @@
-abstract class produto {
+abstract class produto implements interfaceProduto{
     int codigo;
     String nome; 
 
