@@ -22,8 +22,22 @@ public class estoque {
             System.out.printf("\nCodigo: %d\nNome: %s\nPreço: %4.2f\nQuantidade: %d\n", codigo, nome, preço, quantidade);
         }
     }
-    public void addProduto(){}
+    public int buscarProduto(int CodigoProduto){
+        for(int num = 0; num < this.deposito.size(); num++){
+            int codigoDeposito = this.deposito.get(num).getCodigo();
+            if(codigoDeposito == CodigoProduto){
+                return num;
+            }
+        }
+        throw new NullPointerException("Produto não foi encontrado");
+    }
+    public void setQuantidadeProduto(int CodigoProduto, int newQuantidade){
+        int indexProduto = this.buscarProduto(CodigoProduto);
+        produto TempObj = this.deposito.get(indexProduto);
+        TempObj.setQuantidade(newQuantidade);
+        this.deposito.set(indexProduto, TempObj);
+    }
     public void venderProduto(){}
     public void excluirProduto(){}
-    public void buscarProduto(){}
 }
+    
