@@ -2,9 +2,10 @@ public class porUnidade extends produto{
     float preçoPorUnidade;
     int quantidadeUnidades; 
     
-    public porUnidade(int codigo, String nome, float preço, int quantidade){
+    public porUnidade(int codigo, String nome, String fornecedor, float preço, int quantidade){
         this.setCodigo(codigo);
         this.setNome(nome);
+        this.setFornecedor(fornecedor);
         this.setPreço(preço);
         this.setQuantidade(quantidade);
     } 

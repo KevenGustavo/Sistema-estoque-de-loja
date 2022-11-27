@@ -4,12 +4,12 @@ import java.util.List;
 public class estoque {
     List<produto> deposito = new ArrayList<produto>();
     
-    public void cadastrarProduto(boolean tipo, int codigo, String nome, float preço, int quantidade){
+    public void cadastrarProduto(boolean tipo, int codigo, String nome, String fornecedor, float preço, int quantidade){
         if(tipo){
-            porPeso produtoPeso = new porPeso(codigo, nome, preço, quantidade);
+            porPeso produtoPeso = new porPeso(codigo, nome, fornecedor, preço, quantidade);
             this.deposito.add(produtoPeso);
         }else{
-            porUnidade produtoUnitario = new porUnidade(codigo, nome, preço, quantidade);
+            porUnidade produtoUnitario = new porUnidade(codigo, nome, fornecedor, preço, quantidade);
             this.deposito.add(produtoUnitario);
         }
         return;
@@ -31,7 +31,7 @@ public class estoque {
                 return num;
             }
         }
-        throw new NullPointerException("Produto não foi encontrado");
+        throw new NullPointerException("Produto não foi encontrado!");
     }
     public void setQuantidadeProduto(int CodigoProduto, int newQuantidade){
         int indexProduto = this.buscarProduto(CodigoProduto);

@@ -1,9 +1,12 @@
 public class Main{
     public static void main(String[] args) {
+        fornecedores fornecedores = new fornecedores();
         estoque controle = new estoque();
-        controle.cadastrarProduto(true,21,"Limpo",12.50f,2);
+        fornecedores.cadastrarFornecedor("Mercado Livre");
+        String mercadoLivre = fornecedores.getFornecedor("Mercado Livre");
+        controle.cadastrarProduto(true,21,"Limpo",mercadoLivre,12.50f,2);
         controle.listarProdutos();
-        controle.setQuantidadeProduto(2, 30);
+        controle.setQuantidadeProduto(21, 30);
         controle.listarProdutos();
     }
 }

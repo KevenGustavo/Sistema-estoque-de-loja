@@ -2,9 +2,10 @@ public class porPeso extends produto{
     float preçoPorKg;
     int quantidadeTotal;
     
-    public porPeso(int codigo, String nome, float preço, int quantidade){
+    public porPeso(int codigo, String nome,String fornecedor, float preço, int quantidade){
         this.setCodigo(codigo);
         this.setNome(nome);
+        this.setFornecedor(fornecedor);
         this.setPreço(preço);
         this.setQuantidade(quantidade);
     } 
