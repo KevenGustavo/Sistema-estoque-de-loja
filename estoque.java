@@ -12,6 +12,7 @@ public class estoque {
             porUnidade produtoUnitario = new porUnidade(codigo, nome, preço, quantidade);
             this.deposito.add(produtoUnitario);
         }
+        return;
     }
     public void listarProdutos(){
         for(int num = 0; num < this.deposito.size(); num++){
@@ -21,6 +22,7 @@ public class estoque {
             int quantidade = this.deposito.get(num).getQuantidade();
             System.out.printf("\nCodigo: %d\nNome: %s\nPreço: %4.2f\nQuantidade: %d\n", codigo, nome, preço, quantidade);
         }
+        return;
     }
     public int buscarProduto(int CodigoProduto){
         for(int num = 0; num < this.deposito.size(); num++){
@@ -36,8 +38,25 @@ public class estoque {
         produto TempObj = this.deposito.get(indexProduto);
         TempObj.setQuantidade(newQuantidade);
         this.deposito.set(indexProduto, TempObj);
+        return;
     }
-    public void venderProduto(){}
-    public void excluirProduto(){}
+    public void venderProduto(int CodigoProduto, int quantidadeVendida){
+        int indexProduto = this.buscarProduto(CodigoProduto);
+        int quantidadeAtual = this.deposito.get(indexProduto).getQuantidade();
+        int newQuantidade = quantidadeAtual - quantidadeVendida;
+        if(newQuantidade < 0){
+            System.out.println("A quantidade selecionada ultrapassa a quantidade de produtos disponivel no estoque");
+            return;
+        }else{
+            this.setQuantidadeProduto(CodigoProduto, newQuantidade);
+            return;
+        }
+    }
+    public void excluirProduto(int CodigoProduto){
+        int indexProduto = this.buscarProduto(CodigoProduto);
+        this.deposito.remove(indexProduto);
+        System.out.println("Produto removido com sucesso!");
+        return;
+    }
 }
     
