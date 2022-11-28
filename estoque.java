@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class estoque {
-    List<produto> deposito = new ArrayList<produto>();
+public class Estoque {
+    List<Produto> deposito = new ArrayList<Produto>();
     
     public void cadastrarProduto(boolean tipo, int codigo, String nome, String fornecedor, float preço, int quantidade){
         if(tipo){
-            porPeso produtoPeso = new porPeso(codigo, nome, fornecedor, preço, quantidade);
+            PorPeso produtoPeso = new PorPeso(codigo, nome, fornecedor, preço, quantidade);
             this.deposito.add(produtoPeso);
         }else{
-            porUnidade produtoUnitario = new porUnidade(codigo, nome, fornecedor, preço, quantidade);
+            PorUnidade produtoUnitario = new PorUnidade(codigo, nome, fornecedor, preço, quantidade);
             this.deposito.add(produtoUnitario);
         }
         return;
@@ -35,7 +35,7 @@ public class estoque {
     }
     public void setQuantidadeProduto(int CodigoProduto, int newQuantidade){
         int indexProduto = this.buscarProduto(CodigoProduto);
-        produto TempObj = this.deposito.get(indexProduto);
+        Produto TempObj = this.deposito.get(indexProduto);
         TempObj.setQuantidade(newQuantidade);
         this.deposito.set(indexProduto, TempObj);
         return;

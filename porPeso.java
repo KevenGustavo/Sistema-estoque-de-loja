@@ -1,8 +1,8 @@
-public class porPeso extends produto{
+public class PorPeso extends Produto{
     float preçoPorKg;
     int quantidadeTotal;
     
-    public porPeso(int codigo, String nome,String fornecedor, float preço, int quantidade){
+    public PorPeso(int codigo, String nome,String fornecedor, float preço, int quantidade){
         this.setCodigo(codigo);
         this.setNome(nome);
         this.setFornecedor(fornecedor);

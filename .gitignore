@@ -4,6 +4,9 @@
 
 ### Java ###
 # Compiled class file
+/out
+/.idea
+Sistema-estoque-de-loja.iml
 *.class
 
 # Log file

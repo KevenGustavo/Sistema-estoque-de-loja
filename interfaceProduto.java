@@ -1,4 +1,4 @@
-interface interfaceProduto {
+interface InterfaceProduto {
     public int getCodigo();
     public void setCodigo(int codigo);
     public String getNome();

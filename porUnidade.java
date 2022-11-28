@@ -1,8 +1,8 @@
-public class porUnidade extends produto{
+public class PorUnidade extends Produto{
     float preçoPorUnidade;
     int quantidadeUnidades; 
     
-    public porUnidade(int codigo, String nome, String fornecedor, float preço, int quantidade){
+    public PorUnidade(int codigo, String nome, String fornecedor, float preço, int quantidade){
         this.setCodigo(codigo);
         this.setNome(nome);
         this.setFornecedor(fornecedor);

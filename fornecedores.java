@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class fornecedores{
+public class Fornecedores{
     ArrayList<String> fornecedores = new ArrayList<String>();
 
     public void cadastrarFornecedor(String nome){
