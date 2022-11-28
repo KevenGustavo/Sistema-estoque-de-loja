@@ -1,7 +1,6 @@
 public class Programa {
     public static void main(String[] args) {
 
-        Estoque controle1 = new Estoque();
         Fornecedores fornecedores = new Fornecedores();
         Estoque controle = new Estoque();
 
