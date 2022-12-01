@@ -7,17 +7,17 @@ public class Fornecedores{
         this.fornecedores.add(nome);
     }
 
-    public void listarProdutos(){
+    public void listarFornecedores(){
         for(int num = 0; num < this.fornecedores.size(); num++){
             String nomeFornecedor = this.fornecedores.get(num);
             System.out.printf("\nNome: %s\n", nomeFornecedor);
         }
         return;
     }
-    public int buscarProduto(String nomeFornecedor){
+    public int buscarFornecedor(String nomeFornecedor){
         for(int num = 0; num < this.fornecedores.size(); num++){
             String nomeFornecedorLista = this.fornecedores.get(num);
-            if(nomeFornecedorLista == nomeFornecedor){
+            if(nomeFornecedorLista.equals(nomeFornecedor)){
                 return num;
             }
         }
@@ -25,15 +25,15 @@ public class Fornecedores{
     }
 
     public String getFornecedor(String nomeFornecedor){
-        int indexFornecedor = this.buscarProduto(nomeFornecedor);
+        int indexFornecedor = this.buscarFornecedor(nomeFornecedor);
         String fornecedorEncontrado = this.fornecedores.get(indexFornecedor);
         return fornecedorEncontrado;
     }
 
     public void excluirFornecedor(String nomeFornecedor){
-        int indexFornecedor = this.buscarProduto(nomeFornecedor);
+        int indexFornecedor = this.buscarFornecedor(nomeFornecedor);
         this.fornecedores.remove(indexFornecedor);
-        System.out.println("Produto removido com sucesso!");
+        System.out.println("Fornecedor removido com sucesso!");
         return;
     }
 }

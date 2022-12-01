@@ -58,5 +58,13 @@ public class Estoque {
         System.out.println("Produto removido com sucesso!");
         return;
     }
+    public Boolean tipoProduto(int inputTipoProduto){
+        if(inputTipoProduto == 1){
+            return false;
+        }else if(inputTipoProduto == 2){
+            return true;
+        }
+        throw new NullPointerException("Erro ao entrar o tipo do Produto!");
+    }
 }
     
